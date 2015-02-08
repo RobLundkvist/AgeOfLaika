@@ -32,5 +32,18 @@ class ViewController: UIViewController {
     
     }
 
+    @IBAction func calculateHumanYearsToRealDogYears(sender: UIButton) {
+        var doubleHumanYears = Double(humanYearsTextField.text.toInt()!)
+        
+        if doubleHumanYears > 2 {
+            doubleHumanYears = (2 * 10.5) + ((doubleHumanYears - 2) * 4)
+        } else {
+            doubleHumanYears *= 10.5
+        }
+        
+        dogYearsLabel.text = "\(doubleHumanYears)" + " Dog Years"
+        humanYearsTextField.resignFirstResponder()
+        
+    }
 }
 
